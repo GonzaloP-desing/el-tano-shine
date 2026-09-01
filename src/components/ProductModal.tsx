@@ -27,7 +27,7 @@ export function ProductModal({
 
   useEffect(() => {
     if (product) {
-      setSize(product.sizes[0]);
+      setSize(product.sizes[0] ?? "Único");
       setQty(1);
       setActive(0);
     }

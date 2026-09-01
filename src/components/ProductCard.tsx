@@ -13,7 +13,7 @@ export function ProductCard({
   onOpen: (product: Product) => void;
 }) {
   const { add } = useCart();
-  const [size, setSize] = useState(product.sizes[0]);
+  const [size, setSize] = useState(product.sizes[0] ?? "Único");
   const [added, setAdded] = useState(false);
 
   const handleAdd = () => {
