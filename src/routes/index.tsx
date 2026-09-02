@@ -1,24 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { CategoryGrid } from "@/components/CategoryGrid";
+import { Catalog } from "@/components/Catalog";
+import { CareSection } from "@/components/CareSection";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "EL TANO JOYAS | Joyas con baño de oro 18k" },
+      {
+        name: "description",
+        content:
+          "Cadenas, pulseras, anillos y aritos con baño de oro 18k de triple capa. Envíos a todo el país y cuotas sin interés.",
+      },
+      { property: "og:title", content: "EL TANO JOYAS | Joyas con baño de oro 18k" },
+      {
+        property: "og:description",
+        content:
+          "Piezas exclusivas con terminaciones de alta gama para elevar tu estilo diario.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <CategoryGrid />
+      <Catalog eyebrow="Selección" title="Lo más vendido" />
+      <CareSection />
+    </>
   );
 }
