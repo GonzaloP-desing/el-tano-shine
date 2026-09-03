@@ -84,11 +84,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "EL TANO JOYAS | Joyas con baño de oro 18k" },
+      {
+        name: "description",
+        content:
+          "Cadenas, pulseras, anillos y aritos con baño de oro 18k. Envíos a todo el país.",
+      },
+      { name: "author", content: "EL TANO JOYAS" },
+      { property: "og:title", content: "EL TANO JOYAS" },
+      {
+        property: "og:description",
+        content: "Joyas con baño de oro 18k de triple capa.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
