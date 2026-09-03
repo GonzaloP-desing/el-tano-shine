@@ -40,7 +40,7 @@ export function Hero() {
           <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-4">
             {[
               ["Triple capa", "Baño de oro 18k"],
-              ["6 cuotas", "Sin interés"],
+              ["3 cuotas", "Sin interés"],
               ["Envíos", "A todo el país"],
             ].map(([k, v]) => (
               <div key={k}>

@@ -21,7 +21,7 @@ const policies = [
   },
   {
     title: "Garantía del baño de oro",
-    text: "6 meses de garantía sobre el baño de oro 18k siguiendo las indicaciones de cuidado. Si el baño falla por defecto de fabricación, reponemos la pieza sin cargo.",
+    text: "Garantía de 3 meses en el baño de oro 18k siguiendo las indicaciones de cuidado. Si el baño falla por defecto de fabricación, reponemos la pieza sin cargo.",
   },
   {
     title: "Cambios y devoluciones",
