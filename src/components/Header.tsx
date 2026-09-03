@@ -57,7 +57,7 @@ export function Header() {
             <Link
               key={link.label}
               to={link.to}
-              params={"slug" in link ? { slug: link.slug } : undefined}
+              {...("slug" in link ? { params: { slug: link.slug } } : {})}
               activeProps={{ className: "text-primary" }}
               className="text-[0.72rem] tracking-[0.18em] text-muted-foreground uppercase transition-colors hover:text-primary"
             >
@@ -126,7 +126,7 @@ export function Header() {
               <Link
                 key={link.label}
                 to={link.to}
-                params={"slug" in link ? { slug: link.slug } : undefined}
+                {...("slug" in link ? { params: { slug: link.slug } } : {})}
                 onClick={() => setMenu(false)}
                 activeProps={{ className: "text-primary" }}
                 className="border-b border-border/60 py-3 text-sm tracking-[0.14em] text-muted-foreground uppercase"
