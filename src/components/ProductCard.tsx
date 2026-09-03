@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Check, ShoppingBag } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
-import { formatPrice, type Product } from "@/data/products";
+import { formatPrice, listPrice, type Product } from "@/data/products";
 import { useCart } from "@/context/cart";
 
 export function ProductCard({
@@ -46,11 +46,21 @@ export function ProductCard({
             Destacado
           </span>
         )}
+        <span className="absolute bottom-3 left-3 rounded-full bg-background/85 px-2.5 py-1 text-[0.6rem] font-semibold tracking-widest text-primary uppercase backdrop-blur">
+          -20% OFF
+        </span>
       </button>
 
       <div className="flex flex-1 flex-col p-4">
         <h3 className="text-lg leading-tight">{product.name}</h3>
-        <p className="mt-1 font-display text-xl text-primary">{formatPrice(product.price)}</p>
+        <p className="mt-1 flex items-baseline gap-2">
+          <span className="text-sm text-muted-foreground line-through">
+            {formatPrice(listPrice(product))}
+          </span>
+          <span className="font-display text-xl text-primary">
+            {formatPrice(product.price)}
+          </span>
+        </p>
 
         <div className="mt-4">
           <span className="text-[0.65rem] tracking-[0.2em] text-muted-foreground uppercase">

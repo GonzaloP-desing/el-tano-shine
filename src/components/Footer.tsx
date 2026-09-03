@@ -8,7 +8,7 @@ import { categories, waLink } from "@/data/products";
 
 const policies = [
   { icon: Truck, title: "Envíos", text: "A todo el país en 3 a 7 días hábiles. Gratis desde $90.000." },
-  { icon: BadgeCheck, title: "Garantía del baño", text: "6 meses de garantía sobre el baño de oro 18k." },
+  { icon: BadgeCheck, title: "Garantía del baño", text: "Garantía de 3 meses en el baño de oro 18k." },
   { icon: RefreshCw, title: "Cambios", text: "Cambios sin cargo dentro de los 15 días de recibido." },
   { icon: ShieldCheck, title: "Compra segura", text: "Pagos protegidos y datos encriptados." },
 ];

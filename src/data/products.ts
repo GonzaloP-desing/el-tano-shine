@@ -260,3 +260,8 @@ export function formatPrice(value: number) {
 export function waLink(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
+
+/** Precio anterior "tachado": ~25% por encima del precio actual (-20% OFF percibido). */
+export function listPrice(product: Product) {
+  return Math.round((product.price * 1.25) / 100) * 100;
+}

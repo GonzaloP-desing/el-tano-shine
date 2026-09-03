@@ -139,7 +139,7 @@ export function CartDrawer() {
                     setCheckout(true);
                   }}
                 >
-                  Iniciar checkout
+                  INICIAR COMPRA
                 </Button>
                 <Button variant="outlineGold" className="mt-2 w-full" asChild>
                   <a href={waLink(waMessage)} target="_blank" rel="noopener noreferrer">

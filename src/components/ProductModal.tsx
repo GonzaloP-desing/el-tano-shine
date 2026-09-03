@@ -10,7 +10,7 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { SizeGuideDialog } from "@/components/SizeGuide";
-import { formatPrice, waLink, type Product } from "@/data/products";
+import { formatPrice, listPrice, waLink, type Product } from "@/data/products";
 import { useCart } from "@/context/cart";
 
 export function ProductModal({
@@ -79,11 +79,19 @@ export function ProductModal({
           <div className="flex min-w-0 flex-col">
             <span className="eyebrow">Baño de oro 18k</span>
             <h2 className="mt-2 text-3xl leading-tight">{product.name}</h2>
-            <p className="mt-2 font-display text-3xl text-primary">
-              {formatPrice(product.price)}
+            <p className="flex items-baseline gap-3">
+              <span className="text-lg text-muted-foreground line-through">
+                {formatPrice(listPrice(product))}
+              </span>
+              <span className="font-display text-3xl text-primary">
+                {formatPrice(product.price)}
+              </span>
+              <span className="rounded-full border border-primary/50 bg-background/80 px-2 py-0.5 text-[0.6rem] tracking-widest text-primary uppercase">
+                -20% OFF
+              </span>
             </p>
             <p className="mt-1 text-xs text-muted-foreground">
-              3 y 6 cuotas sin interés · Envíos a todo el país
+              3 cuotas sin interés · Envíos a todo el país
             </p>
 
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
