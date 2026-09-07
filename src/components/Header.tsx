@@ -3,6 +3,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
 import { useCart } from "@/context/cart";
 import { categories } from "@/data/products";
+import bottegaLogo from "@/assets/bottega-oro-logo.jpeg.asset.json";
 
 const navLinks = [
   { label: "Inicio", to: "/" as const },
@@ -41,8 +42,12 @@ export function Header() {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-3.5">
         <Link to="/" className="group flex min-w-0 items-center gap-3">
-          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gold-gradient font-display text-lg font-bold text-primary-foreground">
-            T
+          <span className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-sm border border-primary/50 bg-background">
+            <img
+              src={bottegaLogo.url}
+              alt="Bottega oro"
+              className="h-full w-full scale-125 object-cover"
+            />
           </span>
           <span className="min-w-0 leading-none">
             <span className="block truncate font-display text-lg tracking-[0.14em] sm:text-xl">
