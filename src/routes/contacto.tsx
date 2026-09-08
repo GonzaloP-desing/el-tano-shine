@@ -9,7 +9,7 @@ import { waLink } from "@/data/products";
 
 const info = [
   { icon: MessageCircle, title: "WhatsApp", text: "+54 9 11 2233-4455" },
-  { icon: Mail, title: "Email", text: "hola@eltanojoyas.com.ar" },
+  { icon: Mail, title: "Email", text: "hola@bottegaoro.com.ar" },
   { icon: Clock, title: "Atención", text: "Lunes a sábados de 10 a 19 h" },
   { icon: MapPin, title: "Envíos", text: "A todo el país por correo y moto en CABA" },
 ];
@@ -32,17 +32,19 @@ const policies = [
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
-      { title: "Contacto, envíos y garantía | EL TANO JOYAS" },
+      { title: "Contacto, envíos y garantía | Bottega Oro" },
       {
         name: "description",
         content:
           "Escribinos por WhatsApp o email. Conocé nuestras políticas de envío, la garantía del baño de oro 18k y cómo hacer cambios.",
       },
-      { property: "og:title", content: "Contacto | EL TANO JOYAS" },
+      { property: "og:title", content: "Contacto | Bottega Oro" },
       {
         property: "og:description",
         content: "Atención personalizada, envíos a todo el país y garantía sobre el baño de oro 18k.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: ContactoPage,
@@ -70,7 +72,7 @@ function ContactoPage() {
 
           <Button variant="gold" className="mt-6 w-full sm:w-auto" asChild>
             <a
-              href={waLink("¡Hola El Tano Joyas! Tengo una consulta sobre...")}
+              href={waLink("¡Hola Bottega Oro! Tengo una consulta sobre...")}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -9,17 +9,19 @@ export const Route = createFileRoute("/catalogo")({
   validateSearch: searchSchema,
   head: () => ({
     meta: [
-      { title: "Catálogo completo | EL TANO JOYAS" },
+      { title: "Catálogo completo | Bottega Oro" },
       {
         name: "description",
         content:
           "Explorá todas las joyas con baño de oro 18k: cadenas, pulseras, anillos y aritos. Filtrá por categoría y precio.",
       },
-      { property: "og:title", content: "Catálogo completo | EL TANO JOYAS" },
+      { property: "og:title", content: "Catálogo completo | Bottega Oro" },
       {
         property: "og:description",
         content: "Todas nuestras piezas con baño de oro 18k de triple capa, en un solo lugar.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: CatalogoPage,
@@ -32,7 +34,7 @@ function CatalogoPage() {
     <>
       <div className="mx-auto max-w-7xl px-4 pt-12">
         <h1 className="text-4xl sm:text-5xl">
-          Catálogo <span className="text-gold-gradient">El Tano</span>
+          Catálogo <span className="text-gold-gradient">Bottega Oro</span>
         </h1>
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
           {q

@@ -162,7 +162,7 @@ export function ProductModal({
               <Button variant="outlineGold" className="w-full" asChild>
                 <a
                   href={waLink(
-                    `¡Hola El Tano Joyas! Quiero consultar por ${product.name} (${product.sizeLabel}: ${size}) — ${formatPrice(product.price)}`,
+                    `¡Hola Bottega Oro! Quiero consultar por ${product.name} (${product.sizeLabel}: ${size}) — ${formatPrice(product.price)}`,
                   )}
                   target="_blank"
                   rel="noopener noreferrer"

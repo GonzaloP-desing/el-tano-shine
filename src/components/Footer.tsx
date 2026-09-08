@@ -35,7 +35,7 @@ export function Footer() {
 
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1.3fr]">
           <div>
-            <p className="font-display text-2xl tracking-[0.14em]">EL TANO JOYAS</p>
+            <p className="font-display text-2xl tracking-[0.14em]">BOTTEGA ORO</p>
             <p className="text-[0.6rem] tracking-[0.42em] text-primary">
               ORO 18K · ARGENTINA
             </p>
@@ -63,7 +63,7 @@ export function Footer() {
                 <Facebook className="h-4 w-4" aria-hidden />
               </a>
               <a
-                href={waLink("¡Hola El Tano Joyas! Tengo una consulta sobre...")}
+                href={waLink("¡Hola Bottega Oro! Tengo una consulta sobre...")}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
@@ -159,7 +159,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6 text-[0.7rem] text-muted-foreground sm:flex-row sm:justify-between">
-          <p>© {new Date().getFullYear()} El Tano Joyas. Todos los derechos reservados.</p>
+          <p>© {new Date().getFullYear()} Bottega Oro. Todos los derechos reservados.</p>
           <p>Sitio protegido · Compra 100% segura</p>
         </div>
       </div>

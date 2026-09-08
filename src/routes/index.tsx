@@ -7,18 +7,20 @@ import { CareSection } from "@/components/CareSection";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "EL TANO JOYAS | Joyas con baño de oro 18k" },
+      { title: "Bottega Oro | Joyas con baño de oro 18k" },
       {
         name: "description",
         content:
           "Cadenas, pulseras, anillos y aritos con baño de oro 18k de triple capa. Envíos a todo el país y cuotas sin interés.",
       },
-      { property: "og:title", content: "EL TANO JOYAS | Joyas con baño de oro 18k" },
+      { property: "og:title", content: "Bottega Oro | Joyas con baño de oro 18k" },
       {
         property: "og:description",
         content:
           "Piezas exclusivas con terminaciones de alta gama para elevar tu estilo diario.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,

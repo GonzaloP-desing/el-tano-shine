@@ -45,15 +45,17 @@ export function Header() {
           <span className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-sm border border-primary/50 bg-background">
             <img
               src={bottegaLogo.url}
-              alt="Bottega oro"
+              alt="Monograma BO de Bottega Oro"
               className="h-full w-full scale-125 object-cover"
             />
           </span>
           <span className="min-w-0 leading-none">
             <span className="block truncate font-display text-lg tracking-[0.14em] sm:text-xl">
-              EL TANO
+              BOTTEGA ORO
             </span>
-            <span className="block text-[0.6rem] tracking-[0.42em] text-primary">JOYAS</span>
+            <span className="block text-[0.6rem] tracking-[0.42em] text-primary">
+              JOYAS · ORO 18K
+            </span>
           </span>
         </Link>
 

@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * EL TANO JOYAS — dark luxury design system.
+ * BOTTEGA ORO — black marble luxury design system.
  * All colors are oklch semantic tokens. Never hardcode colors in components.
  */
 
@@ -40,6 +40,7 @@
   --color-gold: var(--gold);
   --color-gold-deep: var(--gold-deep);
   --color-gold-soft: var(--gold-soft);
+  --color-cream: var(--cream);
   --color-graphite: var(--graphite);
   --color-surface: var(--surface);
   --color-chart-1: var(--chart-1);
@@ -64,25 +65,26 @@
 
   /* matte black, antique gold and deep emerald */
   --background: oklch(0.218 0 0);
-  --foreground: oklch(1 0 0);
+  --foreground: oklch(0.83 0.075 88);
   --surface: oklch(0.245 0.055 156);
   --card: oklch(0.245 0 0);
-  --card-foreground: oklch(1 0 0);
+  --card-foreground: oklch(0.83 0.075 88);
   --popover: oklch(0.235 0 0);
-  --popover-foreground: oklch(1 0 0);
+  --popover-foreground: oklch(0.83 0.075 88);
 
   /* elegant gold #D4AF37 / #C5A059 */
   --gold: oklch(0.762 0.121 89.5);
   --gold-deep: oklch(0.712 0.086 84);
   --gold-soft: oklch(0.86 0.07 90);
+  --cream: oklch(0.9 0.025 86);
   --graphite: oklch(0.34 0 0);
 
   --primary: oklch(0.762 0.121 89.5);
   --primary-foreground: oklch(0.135 0 0);
   --secondary: oklch(0.255 0.052 156);
-  --secondary-foreground: oklch(1 0 0);
+  --secondary-foreground: oklch(0.9 0.025 86);
   --muted: oklch(0.275 0 0);
-  --muted-foreground: oklch(0.76 0 0);
+  --muted-foreground: oklch(0.86 0.025 86);
   --accent: oklch(0.29 0.06 156);
   --accent-foreground: oklch(0.86 0.07 90);
   --destructive: oklch(0.62 0.21 25);
@@ -97,7 +99,7 @@
   --chart-4: oklch(0.34 0 0);
   --chart-5: oklch(0.72 0 0);
   --sidebar: oklch(0.245 0.055 156);
-  --sidebar-foreground: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.83 0.075 88);
   --sidebar-primary: oklch(0.762 0.121 89.5);
   --sidebar-primary-foreground: oklch(0.135 0 0);
   --sidebar-accent: oklch(0.29 0.06 156);
@@ -132,9 +134,19 @@
 
   body {
     background-color: var(--color-background);
+    background-image:
+      linear-gradient(oklch(0.16 0 0 / 0.28), oklch(0.16 0 0 / 0.28)),
+      url("./assets/black-gold-marble.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+  }
+
+  main {
+    background: color-mix(in oklab, var(--background) 22%, transparent);
   }
 
   button,
