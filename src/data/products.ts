@@ -1,9 +1,12 @@
+import { catalogData, type CatalogItem } from "@/data/catalog";
+
 export type CategorySlug = "cadenas" | "pulseras" | "anillos" | "aritos";
 
 export type Product = {
   id: string;
   name: string;
   category: CategorySlug;
+  subcategory: string;
   price: number;
   featured: boolean;
   description: string;
@@ -12,6 +15,7 @@ export type Product = {
   sizes: string[];
   images: string[];
 };
+
 
 export const categories: {
   slug: CategorySlug;
