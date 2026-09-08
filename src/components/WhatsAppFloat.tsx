@@ -3,7 +3,7 @@ import { waLink } from "@/data/products";
 export function WhatsAppFloat() {
   return (
     <a
-      href={waLink("¡Hola El Tano Joyas! Tengo una consulta sobre...")}
+      href={waLink("¡Hola Bottega Oro! Tengo una consulta sobre...")}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Consultar por WhatsApp"

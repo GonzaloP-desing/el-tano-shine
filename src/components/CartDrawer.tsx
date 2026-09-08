@@ -27,7 +27,7 @@ export function CartDrawer() {
   const [checkout, setCheckout] = useState(false);
 
   const waMessage = [
-    "¡Hola El Tano Joyas! Quiero finalizar este pedido:",
+    "¡Hola Bottega Oro! Quiero finalizar este pedido:",
     "",
     ...lines.map(
       (l) =>

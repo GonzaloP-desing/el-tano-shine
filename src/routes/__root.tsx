@@ -84,14 +84,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "EL TANO JOYAS | Joyas con baño de oro 18k" },
+      { title: "Bottega Oro | Joyas con baño de oro 18k" },
       {
         name: "description",
         content:
           "Cadenas, pulseras, anillos y aritos con baño de oro 18k. Envíos a todo el país.",
       },
-      { name: "author", content: "EL TANO JOYAS" },
-      { property: "og:title", content: "EL TANO JOYAS" },
+      { name: "author", content: "Bottega Oro" },
+      { property: "og:title", content: "Bottega Oro" },
       {
         property: "og:description",
         content: "Joyas con baño de oro 18k de triple capa.",

@@ -20,17 +20,19 @@ const otherGuides = [
 export const Route = createFileRoute("/guia-de-talles")({
   head: () => ({
     meta: [
-      { title: "Guía de talles de anillos y cadenas | EL TANO JOYAS" },
+      { title: "Guía de talles de anillos y cadenas | Bottega Oro" },
       {
         name: "description",
         content:
           "Aprendé a medir el diámetro de tu dedo y elegir el talle correcto de anillo, además de los largos de cadenas y pulseras.",
       },
-      { property: "og:title", content: "Guía de talles | EL TANO JOYAS" },
+      { property: "og:title", content: "Guía de talles | Bottega Oro" },
       {
         property: "og:description",
         content: "Tabla de talles de anillos con diámetro y perímetro, más medidas de cadenas y pulseras.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: GuiaPage,

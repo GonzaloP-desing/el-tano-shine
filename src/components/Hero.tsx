@@ -17,7 +17,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex min-h-[78vh] max-w-7xl flex-col justify-center px-4 py-20 sm:min-h-[85vh]">
         <div className="max-w-2xl">
-          <p className="eyebrow">El Tano Joyas · Alta gama</p>
+          <p className="eyebrow">Bottega Oro · Alta gama</p>
           <h1 className="mt-5 text-4xl leading-[1.05] sm:text-6xl lg:text-7xl">
             Elegancia, presencia y distinción en{" "}
             <span className="text-gold-gradient">Oro 18k</span>

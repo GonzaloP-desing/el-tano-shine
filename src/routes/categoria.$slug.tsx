@@ -13,16 +13,18 @@ export const Route = createFileRoute("/categoria/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Categoría no encontrada | EL TANO JOYAS" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Categoría no encontrada | Bottega Oro" }, { name: "robots", content: "noindex" }],
       };
     }
-    const title = `${loaderData.category.name} con baño de oro 18k | EL TANO JOYAS`;
+    const title = `${loaderData.category.name} con baño de oro 18k | Bottega Oro`;
     return {
       meta: [
         { title },
         { name: "description", content: `${loaderData.category.blurb}. Envíos a todo el país y cuotas sin interés.` },
         { property: "og:title", content: title },
         { property: "og:description", content: loaderData.category.blurb },
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
       ],
     };
   },
