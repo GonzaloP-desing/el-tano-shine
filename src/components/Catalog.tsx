@@ -112,7 +112,30 @@ export function Catalog({
             </select>
           </div>
         </div>
+
+        {subcategories.length > 1 && (
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="mr-1 text-[0.65rem] tracking-[0.2em] text-muted-foreground uppercase">
+              Material
+            </span>
+            {["todas", ...subcategories].map((s) => (
+              <button
+                key={s}
+                onClick={() => setSub(s)}
+                aria-pressed={effectiveSub === s}
+                className={`rounded-sm border px-3 py-1 text-[0.7rem] tracking-widest uppercase transition-colors ${
+                  effectiveSub === s
+                    ? "border-primary text-primary"
+                    : "border-border text-muted-foreground hover:border-primary/60 hover:text-primary"
+                }`}
+              >
+                {s === "todas" ? "Todos" : s}
+              </button>
+            ))}
+          </div>
+        )}
       </div>
+
 
       {list.length === 0 ? (
         <p className="py-16 text-center text-sm text-muted-foreground">
