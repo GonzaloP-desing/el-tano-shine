@@ -27,7 +27,7 @@ export function Footer() {
 
         <div className="hairline my-12" aria-hidden />
 
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1.3fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <p className="font-display text-2xl tracking-[0.14em]">BOTTEGA ORO</p>
             <p className="text-[0.6rem] tracking-[0.42em] text-primary">
