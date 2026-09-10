@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckCircle2, CreditCard, Lock } from "lucide-react";
+import { CheckCircle2, CreditCard } from "lucide-react";
 import {
   Dialog,
   DialogContent,
