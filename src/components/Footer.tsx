@@ -116,35 +116,7 @@ export function Footer() {
           </nav>
 
           <div>
-            <p className="eyebrow">Newsletter</p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Suscribite y recibí un 10% off en tu primera compra, más los
-              lanzamientos antes que nadie.
-            </p>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.success("¡Listo! Te suscribiste", {
-                  description: "Revisá tu casilla: te enviamos el cupón de 10% off.",
-                });
-                setEmail("");
-              }}
-              className="mt-4 flex flex-col gap-2 sm:flex-row"
-            >
-              <Input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="tu@email.com"
-                aria-label="Tu email"
-              />
-              <Button type="submit" variant="gold" className="shrink-0">
-                Suscribirme
-              </Button>
-            </form>
-
-            <p className="eyebrow mt-8">Medios de pago</p>
+            <p className="eyebrow">Medios de pago</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {["Visa", "Mastercard", "Amex", "Mercado Pago", "Transferencia"].map((m) => (
                 <span
