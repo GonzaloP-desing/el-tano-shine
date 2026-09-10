@@ -1,9 +1,5 @@
-import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, ShieldCheck, Truck, BadgeCheck, RefreshCw } from "lucide-react";
-import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { categories, waLink } from "@/data/products";
 
 const policies = [
@@ -14,8 +10,6 @@ const policies = [
 ];
 
 export function Footer() {
-  const [email, setEmail] = useState("");
-
   return (
     <footer className="border-t border-border bg-surface">
       <div className="mx-auto max-w-7xl px-4 py-14">
@@ -33,7 +27,7 @@ export function Footer() {
 
         <div className="hairline my-12" aria-hidden />
 
-        <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr_1.3fr]">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <p className="font-display text-2xl tracking-[0.14em]">BOTTEGA ORO</p>
             <p className="text-[0.6rem] tracking-[0.42em] text-primary">
@@ -116,35 +110,7 @@ export function Footer() {
           </nav>
 
           <div>
-            <p className="eyebrow">Newsletter</p>
-            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Suscribite y recibí un 10% off en tu primera compra, más los
-              lanzamientos antes que nadie.
-            </p>
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                toast.success("¡Listo! Te suscribiste", {
-                  description: "Revisá tu casilla: te enviamos el cupón de 10% off.",
-                });
-                setEmail("");
-              }}
-              className="mt-4 flex flex-col gap-2 sm:flex-row"
-            >
-              <Input
-                type="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="tu@email.com"
-                aria-label="Tu email"
-              />
-              <Button type="submit" variant="gold" className="shrink-0">
-                Suscribirme
-              </Button>
-            </form>
-
-            <p className="eyebrow mt-8">Medios de pago</p>
+            <p className="eyebrow">Medios de pago</p>
             <div className="mt-3 flex flex-wrap gap-2">
               {["Visa", "Mastercard", "Amex", "Mercado Pago", "Transferencia"].map((m) => (
                 <span
