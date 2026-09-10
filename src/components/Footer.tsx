@@ -1,9 +1,5 @@
-import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { Instagram, Facebook, ShieldCheck, Truck, BadgeCheck, RefreshCw } from "lucide-react";
-import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { categories, waLink } from "@/data/products";
 
 const policies = [
