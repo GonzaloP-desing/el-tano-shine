@@ -31,26 +31,11 @@ export function Catalog({
 
   const effectiveCategory = lockCategory ? initialCategory : category;
 
-  const subcategories = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          products
-            .filter((p) => effectiveCategory === "todas" || p.category === effectiveCategory)
-            .map((p) => p.subcategory),
-        ),
-      ),
-    [effectiveCategory],
-  );
-
-  const effectiveSub = subcategories.includes(sub) ? sub : "todas";
-
   const list = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtered = products.filter(
       (p) =>
         (effectiveCategory === "todas" || p.category === effectiveCategory) &&
-        (effectiveSub === "todas" || p.subcategory === effectiveSub) &&
         (q === "" || p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)),
     );
     return [...filtered].sort((a, b) => {
