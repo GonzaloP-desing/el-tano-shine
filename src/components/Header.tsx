@@ -42,7 +42,7 @@ export function Header() {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-4 px-4 py-3.5">
         <Link to="/" className="group flex min-w-0 items-center gap-3">
-          <span className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-sm border border-primary/50 bg-background">
+          <span className="grid h-10 w-10 shrink-0 place-items-center overflow-hidden rounded-full border border-primary/50 bg-background">
             <img
               src={bottegaLogo.url}
               alt="Monograma BO de Bottega Oro"
