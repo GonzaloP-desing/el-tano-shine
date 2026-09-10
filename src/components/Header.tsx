@@ -3,7 +3,7 @@ import { Link, useNavigate } from "@tanstack/react-router";
 import { Menu, Search, ShoppingBag, X } from "lucide-react";
 import { useCart } from "@/context/cart";
 import { categories } from "@/data/products";
-import bottegaLogo from "@/assets/bottega-oro-logo.jpeg.asset.json";
+import bottegaLogo from "@/assets/bottega-oro-logo-new.png.asset.json";
 
 const navLinks = [
   { label: "Inicio", to: "/" as const },
