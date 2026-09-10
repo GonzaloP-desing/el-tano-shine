@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CheckCircle2, CreditCard, Lock } from "lucide-react";
+import { CheckCircle2, CreditCard } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -131,9 +131,19 @@ export function CheckoutDialog({
                   <CreditCard className="h-4 w-4" aria-hidden />
                   {status === "processing" ? "Procesando..." : "Pagar ahora"}
                 </Button>
-                <p className="mt-3 flex items-center justify-center gap-1.5 text-[0.65rem] tracking-widest text-muted-foreground uppercase">
-                  <Lock className="h-3 w-3" aria-hidden /> Pago 100% seguro
-                </p>
+                <div className="mt-3 flex items-center justify-center gap-3" aria-label="Medios de pago aceptados">
+                  <svg className="h-5 max-h-5 text-muted-foreground/80" style={{ filter: "grayscale(1) opacity(0.85)" }} viewBox="0 0 48 32" role="img" aria-label="Visa" fill="currentColor">
+                    <path d="M2 4h44a2 2 0 0 1 2 2v20a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z" fill="none"/>
+                    <path d="M18.5 21.3h-3.2l2-12.6h3.2l-2 12.6zM9.7 8.7L6.6 17.1l-.4-1.9-.1-.3-1.2-6.1S4.7 8.7 3.6 8.7H0v.2C.2 9 4.3 21.3 4.3 21.3h3.3l5-12.6h-3zM35.7 21.3V8.7h-3v12.6h3zm-9.3-12.6l-4.9 12.6h-3.3L11.5 8.7h3.2l2.8 8.8.3 1.5.3-1.5 2.8-8.8h3.2z" />
+                  </svg>
+                  <svg className="h-5 max-h-5 text-muted-foreground/80" style={{ filter: "grayscale(1) opacity(0.85)" }} viewBox="0 0 48 32" role="img" aria-label="Mastercard" fill="currentColor">
+                    <circle cx="19" cy="16" r="8" />
+                    <circle cx="29" cy="16" r="8" fill="currentColor" opacity="0.65" />
+                  </svg>
+                  <svg className="h-5 max-h-5 text-muted-foreground/80" style={{ filter: "grayscale(1) opacity(0.85)" }} viewBox="0 0 48 32" role="img" aria-label="Mercado Pago" fill="currentColor">
+                    <path d="M24 5c-5.5 0-10 4-10 9 0 4 3 7 7 7.5-1 1.5-2.5 2.5-4 3 2 .5 4 .5 6 0 5-1 9-5 9-10.5C32 9 28 5 24 5zm0 3c2.5 0 4.5 2.5 4.5 5.5S26.5 19 24 19s-4.5-2.5-4.5-5.5S21.5 8 24 8z" />
+                  </svg>
+                </div>
               </aside>
             </form>
           </>

@@ -25,32 +25,16 @@ export function Catalog({
   query?: string;
 }) {
   const [category, setCategory] = useState<CategorySlug | "todas">(initialCategory);
-  const [sub, setSub] = useState<string>("todas");
   const [sort, setSort] = useState<Sort>("destacados");
   const [selected, setSelected] = useState<Product | null>(null);
 
   const effectiveCategory = lockCategory ? initialCategory : category;
-
-  const subcategories = useMemo(
-    () =>
-      Array.from(
-        new Set(
-          products
-            .filter((p) => effectiveCategory === "todas" || p.category === effectiveCategory)
-            .map((p) => p.subcategory),
-        ),
-      ),
-    [effectiveCategory],
-  );
-
-  const effectiveSub = subcategories.includes(sub) ? sub : "todas";
 
   const list = useMemo(() => {
     const q = query.trim().toLowerCase();
     const filtered = products.filter(
       (p) =>
         (effectiveCategory === "todas" || p.category === effectiveCategory) &&
-        (effectiveSub === "todas" || p.subcategory === effectiveSub) &&
         (q === "" || p.name.toLowerCase().includes(q) || p.description.toLowerCase().includes(q)),
     );
     return [...filtered].sort((a, b) => {
@@ -58,7 +42,7 @@ export function Catalog({
       if (sort === "precio-desc") return b.price - a.price;
       return Number(b.featured) - Number(a.featured) || a.price - b.price;
     });
-  }, [effectiveCategory, effectiveSub, sort, query]);
+  }, [effectiveCategory, sort, query]);
 
 
   return (
@@ -113,27 +97,11 @@ export function Catalog({
           </div>
         </div>
 
-        {subcategories.length > 1 && (
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="mr-1 text-[0.65rem] tracking-[0.2em] text-muted-foreground uppercase">
-              Material
-            </span>
-            {["todas", ...subcategories].map((s) => (
-              <button
-                key={s}
-                onClick={() => setSub(s)}
-                aria-pressed={effectiveSub === s}
-                className={`rounded-sm border px-3 py-1 text-[0.7rem] tracking-widest uppercase transition-colors ${
-                  effectiveSub === s
-                    ? "border-primary text-primary"
-                    : "border-border text-muted-foreground hover:border-primary/60 hover:text-primary"
-                }`}
-              >
-                {s === "todas" ? "Todos" : s}
-              </button>
-            ))}
-          </div>
-        )}
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="rounded-sm border border-primary/50 bg-primary/10 px-3 py-1 text-[0.7rem] tracking-widest text-primary uppercase">
+            Baño de oro en 18k
+          </span>
+        </div>
       </div>
 
 
