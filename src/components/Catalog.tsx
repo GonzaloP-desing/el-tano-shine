@@ -25,7 +25,6 @@ export function Catalog({
   query?: string;
 }) {
   const [category, setCategory] = useState<CategorySlug | "todas">(initialCategory);
-  const [sub, setSub] = useState<string>("todas");
   const [sort, setSort] = useState<Sort>("destacados");
   const [selected, setSelected] = useState<Product | null>(null);
 
@@ -43,7 +42,7 @@ export function Catalog({
       if (sort === "precio-desc") return b.price - a.price;
       return Number(b.featured) - Number(a.featured) || a.price - b.price;
     });
-  }, [effectiveCategory, effectiveSub, sort, query]);
+  }, [effectiveCategory, sort, query]);
 
 
   return (
